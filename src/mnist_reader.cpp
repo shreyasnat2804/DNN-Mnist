@@ -2,10 +2,9 @@
 #include <fstream>
 #include <vector>
 #include <string>
-#include <stdexcept> // For std::runtime_error
-#include <algorithm> // For std::reverse (if needed for endianness, though often handled byte-by-byte)
+#include <stdexcept>
+#include <algorithm> 
 
-// Helper function to reverse byte order (MNIST data is big-endian)
 uint32_t reverse_int(uint32_t i) {
     unsigned char c1, c2, c3, c4;
     c1 = i & 255;
